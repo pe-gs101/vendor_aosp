@@ -230,3 +230,7 @@ $(call inherit-product, vendor/aosp/config/rro_overlays.mk)
 $(call inherit-product, packages/overlays/ThemeIcons/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
+
+# Disable remote keyguard animation
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.wm.enable_remote_keyguard_animation=0
